@@ -14,8 +14,11 @@
     <string name="empty_fragment.message.text">здесь ничего нет</string>
 
     <!-- Home screen -->
-    <string name="home_screen.title.text">Поиск дешёвых\nавиабилетов</string>
-    <string name="home_screen.first_subtitle.text">Музыкально отлететь</string>
-    <string name="home_screen.route_field.country_from">Откуда - Москва</string>
-    <string name="home_screen.route_field.country_to">Куда - Турция</string>
+    <string name="home_screen.title">Поиск дешёвых\nавиабилетов</string>
+    <string name="home_screen.first_subtitle">Музыкально отлететь</string>
+    <string name="home_screen.route_field.country_from.hint">Откуда - Москва</string>
+    <string name="home_screen.route_field.country_to.hint">Куда - Турция</string>
+
+    <!-- Home screen list of suggestions item -->
+    <string name="list_of_suggestions_item.price">от %s ₽</string>
 </resources>

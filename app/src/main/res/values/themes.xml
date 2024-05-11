@@ -1,7 +1,6 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="Theme.EffectiveMobileTestApp" parent="Theme.Material3.Dark.NoActionBar">

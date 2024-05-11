@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelVisibilityMode="labeled"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="@dimen/home_screen.navigation_bar.padding_horizontal"
         app:itemTextAppearanceActive="@style/TabText1"
         app:itemTextAppearanceInactive="@style/TabText1"
         app:itemTextAppearanceActiveBoldEnabled="false"

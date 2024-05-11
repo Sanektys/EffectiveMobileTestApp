@@ -16,4 +16,28 @@
     <!-- Empty fragments -->
     <dimen name="empty_fragment.image.height">220dp</dimen>
     <dimen name="empty_fragment.message.text_size">20sp</dimen>
+
+    <!-- Home screen -->
+    <dimen name="home_screen.common.margin_horizontal">16dp</dimen>
+    <dimen name="home_screen.navigation_bar.padding_horizontal">20dp</dimen>
+    <dimen name="home_screen.title.margin_top">28dp</dimen>
+    <dimen name="home_screen.title.margin_horizontal">32dp</dimen>
+    <dimen name="home_screen.route_field.card_bottom.margin_top">36dp</dimen>
+    <dimen name="home_screen.route_field.card_bottom.padding">16dp</dimen>
+    <dimen name="home_screen.route_field.card.corner_radius">16dp</dimen>
+    <dimen name="home_screen.route_field.card.elevation">8dp</dimen>
+    <dimen name="home_screen.route_field.card_top.padding_vertical">16dp</dimen>
+    <dimen name="home_screen.route_field.card_top.padding_right">16dp</dimen>
+    <dimen name="home_screen.route_field.card_top.padding_left">8dp</dimen>
+    <dimen name="home_screen.route_field.country_from.margin_start">16dp</dimen>
+    <dimen name="home_screen.route_field.divider.margin_vertical">8dp</dimen>
+    <dimen name="home_screen.first_subtitle.margin_top">36dp</dimen>
+    <dimen name="home_screen.list_of_suggestions.margin_top">20dp</dimen>
+
+    <!-- Home screen list of suggestions item -->
+    <dimen name="list_of_suggestions_item.margin_end">16dp</dimen>
+    <dimen name="list_of_suggestions_item.picture.size">132dp</dimen>
+    <dimen name="list_of_suggestions_item.name.margin_top">8dp</dimen>
+    <dimen name="list_of_suggestions_item.location.margin_top">8dp</dimen>
+    <dimen name="list_of_suggestions_item.flight_icon.margin_top">4dp</dimen>
 </resources>
