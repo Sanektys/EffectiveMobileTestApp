@@ -1,0 +1,19 @@
+<resources>
+    <!-- Styles' dimensions -->
+    <dimen name="style.common_button.corner_radius">8dp</dimen>
+    <dimen name="style.rounded_button.corner_radius">28dp</dimen>
+    <dimen name="style.rounded_button_with_icon.corner_radius">18dp</dimen>
+    <dimen name="style.rounded_button_with_icon.icon_padding">4dp</dimen>
+    <dimen name="style.rounded_button_with_icon.padding_horizontal">10dp</dimen>
+
+    <!-- Font's sizes -->
+    <dimen name="text_extra_large">22sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_extra_small">10sp</dimen>
+
+    <!-- Empty fragments -->
+    <dimen name="empty_fragment.image.height">220dp</dimen>
+    <dimen name="empty_fragment.message.text_size">20sp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EffectiveMobileTestApp</string>
+
+    <!-- Bottom bar -->
+    <string name="bottom_bar.title.home">Авиабилеты</string>
+    <string name="bottom_bar.title.hotels">Отели</string>
+    <string name="bottom_bar.title.shortly">Короче</string>
+    <string name="bottom_bar.title.subscriptions">Подписки</string>
+    <string name="bottom_bar.title.profile">Профиль</string>
+
+    <!-- Empty fragments -->
+    <string name="empty_fragment.message.text">здесь ничего нет</string>
+</resources>
