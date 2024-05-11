@@ -7,31 +7,31 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/airliner_icon"
-        android:title="@string/bottom_bar.title.home"
+        android:title="@string/navigation.label.home"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_hotels"
         android:icon="@drawable/hotels_icon"
-        android:title="@string/bottom_bar.title.hotels"
+        android:title="@string/navigation.label.hotels"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/navigation_shortly"
         android:icon="@drawable/destination_point_icon"
-        android:title="@string/bottom_bar.title.shortly"
+        android:title="@string/navigation.label.shortly"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/navigation_subscriptions"
         android:icon="@drawable/subscriptions_icon"
-        android:title="@string/bottom_bar.title.subscriptions"
+        android:title="@string/navigation.label.subscriptions"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile_icon"
-        android:title="@string/bottom_bar.title.profile"
+        android:title="@string/navigation.label.profile"
         app:showAsAction="always"/>
 
 </menu>

@@ -9,30 +9,56 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.effectivemobiletestapp.ui.screens.home.HomeFragment"
-        android:label="@string/bottom_bar.title.home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/navigation.label.home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_navigation_home_to_selectedCountryFragment"
+            app:destination="@id/selectedCountryFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_hotels"
         android:name="com.example.effectivemobiletestapp.ui.screens.hotels.HotelsFragment"
-        android:label="@string/bottom_bar.title.hotels"
+        android:label="@string/navigation.label.hotels"
         tools:layout="@layout/fragment_hotels" />
 
     <fragment
         android:id="@+id/navigation_shortly"
         android:name="com.example.effectivemobiletestapp.ui.screens.shortly.ShortlyFragment"
-        android:label="@string/bottom_bar.title.shortly"
+        android:label="@string/navigation.label.shortly"
         tools:layout="@layout/fragment_shortly" />
 
     <fragment
         android:id="@+id/navigation_subscriptions"
         android:name="com.example.effectivemobiletestapp.ui.screens.subscriptions.SubscriptionsFragment"
-        android:label="@string/bottom_bar.title.subscriptions"
+        android:label="@string/navigation.label.subscriptions"
         tools:layout="@layout/fragment_subscriptions" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.effectivemobiletestapp.ui.screens.profile.ProfileFragment"
-        android:label="@string/bottom_bar.title.profile"
+        android:label="@string/navigation.label.profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/selectedCountryFragment"
+        android:name="com.example.effectivemobiletestapp.ui.screens.selected_country.SelectedCountryFragment"
+        android:label="@string/navigation.label.selected_country"
+        tools:layout="@layout/fragment_selected_country" >
+
+        <action
+            android:id="@+id/action_selectedCountryFragment_to_allTicketsListFragment"
+            app:destination="@id/allTicketsListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/selectedCountryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allTicketsListFragment"
+        android:name="com.example.effectivemobiletestapp.ui.screens.all_tickets_list.AllTicketsListFragment"
+        android:label="@string/navigation.label.all_tickets_list"
+        tools:layout="@layout/fragment_all_tickets_list" />
 </navigation>

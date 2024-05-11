@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">EffectiveMobileTestApp</string>
 
-    <!-- Bottom bar -->
-    <string name="bottom_bar.title.home">Авиабилеты</string>
-    <string name="bottom_bar.title.hotels">Отели</string>
-    <string name="bottom_bar.title.shortly">Короче</string>
-    <string name="bottom_bar.title.subscriptions">Подписки</string>
-    <string name="bottom_bar.title.profile">Профиль</string>
+    <!-- Navigation -->
+    <string name="navigation.label.home">Авиабилеты</string>
+    <string name="navigation.label.hotels">Отели</string>
+    <string name="navigation.label.shortly">Короче</string>
+    <string name="navigation.label.subscriptions">Подписки</string>
+    <string name="navigation.label.profile">Профиль</string>
+    <string name="navigation.label.selected_country">Выбранная страна</string>
+    <string name="navigation.label.all_tickets_list">Посмотреть билеты</string>
 
     <!-- Empty fragments -->
     <string name="empty_fragment.message.text">здесь ничего нет</string>
