@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Base application theme. -->
-    <style name="Theme.EffectiveMobileTestApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.EffectiveMobileTestApp" parent="Theme.Material3.Dark.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/grey_5</item>
@@ -13,6 +13,10 @@
         <item name="colorSecondary">@color/grey_3</item>
         <item name="colorSecondaryVariant">@color/grey_7</item>
         <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorOutline">@color/grey_5</item>
+        <item name="colorOutlineVariant">@color/grey_5</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
 
@@ -26,34 +30,42 @@
     <style name="Title1">
         <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
         <item name="android:textSize">@dimen/text_extra_large</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="Title2">
         <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
         <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="Title3">
         <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
         <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="Title4">
         <item name="android:fontFamily">@font/sf_pro_display_regular_italic</item>
         <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="Text1">
         <item name="android:fontFamily">@font/sf_pro_display_regular</item>
         <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="Text2">
         <item name="android:fontFamily">@font/sf_pro_display_regular</item>
         <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="ButtonText1">
         <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
         <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="TabText1">
         <item name="android:fontFamily">@font/sf_pro_display_regular</item>
         <item name="android:textSize">@dimen/text_extra_small</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
 
     <!-- Button styles -->
