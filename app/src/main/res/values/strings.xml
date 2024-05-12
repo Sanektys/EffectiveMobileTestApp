@@ -21,4 +21,14 @@
 
     <!-- Home screen list of suggestions item -->
     <string name="list_of_suggestions_item.price">от %s ₽</string>
+
+    <!-- Search screen -->
+    <string name="search_screen.sub_menu.first_item.label">Сложный\nмаршрут</string>
+    <string name="search_screen.sub_menu.second_item.label">Куда угодно</string>
+    <string name="search_screen.sub_menu.third_item.label">Выходные</string>
+    <string name="search_screen.sub_menu.fourth_item.label">Горячие\nбилеты</string>
+    <string name="search_screen.suggestions_list.item.label">Популярное направление</string>
+    <string name="search_screen.suggestions_list.first_item.title">Стамбул</string>
+    <string name="search_screen.suggestions_list.second_item.title">Сочи</string>
+    <string name="search_screen.suggestions_list.third_item.title">Пхукет</string>
 </resources>

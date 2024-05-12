@@ -40,4 +40,25 @@
     <dimen name="list_of_suggestions_item.name.margin_top">8dp</dimen>
     <dimen name="list_of_suggestions_item.location.margin_top">8dp</dimen>
     <dimen name="list_of_suggestions_item.flight_icon.margin_top">4dp</dimen>
+
+    <!-- Search screen -->
+    <dimen name="search_screen.margin_top">24dp</dimen>
+    <dimen name="search_screen.half_expanded_ratio">0.85</dimen>
+    <dimen name="search_screen.common.margin_horizontal">16dp</dimen>
+    <dimen name="search_screen.route_field.card.padding">16dp</dimen>
+    <dimen name="search_screen.route_field.icon.margin_vertical">8dp</dimen>
+    <dimen name="search_screen.route_field.text_field.margin_start">8dp</dimen>
+    <dimen name="search_screen.route_field.cross_icon.padding_horizontal">8dp</dimen>
+    <dimen name="search_screen.route_field.cross_icon.padding_vertical">6dp</dimen>
+    <dimen name="search_screen.sub_menu.item.size">48dp</dimen>
+    <dimen name="search_screen.sub_menu.item.padding">12dp</dimen>
+    <dimen name="search_screen.sub_menu.margin_top">24dp</dimen>
+    <dimen name="search_screen.sub_menu.margin_horizontal">28dp</dimen>
+    <dimen name="search_screen.sub_menu.item.label.margin_top">8dp</dimen>
+    <dimen name="search_screen.suggestions_list.padding">16dp</dimen>
+    <dimen name="search_screen.suggestions_list.margin_top">72dp</dimen>
+    <dimen name="search_screen.suggestions_list.item.padding_vertical">8dp</dimen>
+    <dimen name="search_screen.suggestions_list.item.icon.size">40dp</dimen>
+    <dimen name="search_screen.suggestions_list.item.text_field.margin_start">48dp</dimen>
+    <dimen name="search_screen.suggestions_list.divider.margin_bottom">8dp</dimen>
 </resources>

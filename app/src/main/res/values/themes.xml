@@ -21,8 +21,8 @@
 
         <!-- Customize your theme here. -->
 
-        <!-- Switch style -->
         <item name="switchStyle">@style/Switch</item>
+        <item name="bottomSheetDragHandleStyle">@style/DragHandleBottomSheet</item>
     </style>
 
     <!-- Text styles -->
@@ -107,5 +107,25 @@
     <style name="Switch" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="thumbTint">@color/switch_thumb_state_colors_blue</item>
         <item name="trackTint">@color/switch_track_state_colors_blue</item>
+    </style>
+
+    <!-- Bottom sheet modal style -->
+    <style name="BottomSheetModal" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerLarge</item>
+        <item name="backgroundTint">@color/grey_2</item>
+        <item name="behavior_skipCollapsed">true</item>
+        <item name="behavior_fitToContents">false</item>"
+        <item name="behavior_halfExpandedRatio">@dimen/search_screen.half_expanded_ratio</item>
+        <item name="behavior_expandedOffset">@dimen/search_screen.margin_top</item>
+        <item name="shouldRemoveExpandedCorners">false</item>
+        <item name="behavior_saveFlags">all</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModal</item>
+    </style>
+
+    <style name="DragHandleBottomSheet" parent="Widget.Material3.BottomSheet.DragHandle">
+        <item name="tint">@color/grey_5</item>
     </style>
 </resources>
