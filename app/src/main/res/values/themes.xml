@@ -20,9 +20,9 @@
         <item name="android:statusBarColor">@color/black</item>
 
         <!-- Customize your theme here. -->
-
         <item name="switchStyle">@style/Switch</item>
         <item name="bottomSheetDragHandleStyle">@style/DragHandleBottomSheet</item>
+        <item name="chipStyle">@style/ChipStyle</item>
     </style>
 
     <!-- Text styles -->
@@ -84,6 +84,8 @@
         <item name="android:textColor">@color/text_state_colors_for_blue_button</item>
         <item name="android:textAppearance">@style/ButtonText1</item>
         <item name="cornerRadius">@dimen/style.common_button.corner_radius</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
     </style>
 
     <style name="ButtonOrange" parent="ThemeOverlay.Material3.Button">
@@ -101,6 +103,21 @@
         <item name="android:paddingEnd">@dimen/style.rounded_button_with_icon.padding_horizontal</item>
         <item name="iconPadding">@dimen/style.rounded_button_with_icon.icon_padding</item>
         <item name="cornerRadius">@dimen/style.rounded_button_with_icon.corner_radius</item>
+    </style>
+
+    <style name="ChipStyle" parent="Widget.Material3.Chip.Suggestion">
+        <item name="chipIconVisible">true</item>
+        <item name="chipBackgroundColor">@color/grey_3</item>
+        <item name="android:textAppearance">@style/Title4</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipStartPadding">@dimen/style.rounded_button_with_icon.padding_horizontal</item>
+        <item name="chipEndPadding">@dimen/style.rounded_button_with_icon.padding_horizontal</item>
+        <item name="iconEndPadding">@dimen/style.rounded_button_with_icon.icon_padding</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="chipCornerRadius">@dimen/style.rounded_button_with_icon.corner_radius</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
     </style>
 
     <!-- Switch styles -->

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dot_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/dot_shape"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/Title4"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/dot_icon"
+        app:layout_constraintStart_toEndOf="@id/dot_icon"
+        tools:text="Уральские авиалинии"/>
+
+    <TextView
+        android:id="@+id/times"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/Text2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/dot_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="7:00 9:10 10:00 11:00 12:00 13:00 14:00 15:00 16:20"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/Title4"
+        android:textColor="@color/blue"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintEnd_toStartOf="@id/arrow_icon"
+        tools:text="2 390 ₽"/>
+
+    <ImageView
+        android:id="@+id/arrow_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right_arrow_icon"
+        app:layout_constraintTop_toTopOf="@id/price"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:dividerColor="@color/grey_4"
+        app:layout_constraintTop_toBottomOf="@id/times" />
+</androidx.constraintlayout.widget.ConstraintLayout>

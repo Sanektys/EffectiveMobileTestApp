@@ -2,8 +2,8 @@
     <!-- Styles' dimensions -->
     <dimen name="style.common_button.corner_radius">8dp</dimen>
     <dimen name="style.rounded_button.corner_radius">28dp</dimen>
-    <dimen name="style.rounded_button_with_icon.corner_radius">18dp</dimen>
-    <dimen name="style.rounded_button_with_icon.icon_padding">4dp</dimen>
+    <dimen name="style.rounded_button_with_icon.corner_radius">20dp</dimen>
+    <dimen name="style.rounded_button_with_icon.icon_padding">8dp</dimen>
     <dimen name="style.rounded_button_with_icon.padding_horizontal">10dp</dimen>
 
     <!-- Font's sizes -->
