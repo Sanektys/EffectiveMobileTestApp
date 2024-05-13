@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/search_screen.route_field"
+                android:id="@+id/route_field"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:contentPadding="@dimen/search_screen.route_field.card.padding"
@@ -35,7 +35,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/search_screen.flight_icon"
+                        android:id="@+id/flight_icon"
                         android:src="@drawable/airliner_v2_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -46,14 +46,14 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
-                        android:id="@+id/search_screen.country_from"
+                        android:id="@+id/country_from"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/ButtonText1"
                         android:layout_marginStart="@dimen/search_screen.route_field.text_field.margin_start"
-                        app:layout_constraintTop_toTopOf="@id/search_screen.flight_icon"
-                        app:layout_constraintStart_toEndOf="@id/search_screen.flight_icon"
-                        app:layout_constraintBottom_toBottomOf="@id/search_screen.flight_icon"
+                        app:layout_constraintTop_toTopOf="@id/flight_icon"
+                        app:layout_constraintStart_toEndOf="@id/flight_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/flight_icon"
                         app:layout_constraintEnd_toEndOf="parent"
                         tools:text="Минск"/>
 
@@ -69,7 +69,7 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
 
                     <ImageView
-                        android:id="@+id/search_screen.search_icon"
+                        android:id="@+id/search_icon"
                         android:src="@drawable/search_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                         tools:ignore="ContentDescription" />
 
                     <EditText
-                        android:id="@+id/search_screen.country_to"
+                        android:id="@+id/country_to"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:inputType="textCapWords|textAutoCorrect"
@@ -89,13 +89,13 @@
                         android:textAppearance="@style/ButtonText1"
                         android:background="@null"
                         android:layout_marginStart="@dimen/search_screen.route_field.text_field.margin_start"
-                        app:layout_constraintStart_toEndOf="@id/search_screen.search_icon"
-                        app:layout_constraintEnd_toStartOf="@id/search_screen.cross_icon"
-                        app:layout_constraintTop_toTopOf="@id/search_screen.search_icon"
-                        app:layout_constraintBottom_toBottomOf="@id/search_screen.search_icon"/>
+                        app:layout_constraintStart_toEndOf="@id/search_icon"
+                        app:layout_constraintEnd_toStartOf="@id/cross_icon"
+                        app:layout_constraintTop_toTopOf="@id/search_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/search_icon"/>
 
                     <ImageView
-                        android:id="@+id/search_screen.cross_icon"
+                        android:id="@+id/cross_icon"
                         android:src="@drawable/cross_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -104,16 +104,16 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        app:layout_constraintTop_toTopOf="@id/search_screen.search_icon"
-                        app:layout_constraintBottom_toBottomOf="@id/search_screen.search_icon"
-                        app:layout_constraintStart_toEndOf="@id/search_screen.country_to"
+                        app:layout_constraintTop_toTopOf="@id/search_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/search_icon"
+                        app:layout_constraintStart_toEndOf="@id/country_to"
                         app:layout_constraintEnd_toEndOf="parent"
                         tools:ignore="ContentDescription" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/search_screen.sub_menu.first_item"
+                android:id="@+id/sub_menu.first_item"
                 android:layout_width="@dimen/search_screen.sub_menu.item.size"
                 android:layout_height="@dimen/search_screen.sub_menu.item.size"
                 android:layout_marginTop="@dimen/search_screen.sub_menu.margin_top"
@@ -124,9 +124,9 @@
                 app:cardBackgroundColor="@color/green"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
                 style="@style/Widget.Material3.CardView.Filled"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.route_field"
+                app:layout_constraintTop_toBottomOf="@id/route_field"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/search_screen.sub_menu.second_item"
+                app:layout_constraintEnd_toStartOf="@id/sub_menu.second_item"
                 app:layout_constraintHorizontal_chainStyle="spread_inside">
 
                 <ImageView
@@ -143,12 +143,12 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/Text2"
                 android:layout_marginTop="@dimen/search_screen.sub_menu.item.label.margin_top"
-                app:layout_constraintStart_toStartOf="@id/search_screen.sub_menu.first_item"
-                app:layout_constraintEnd_toEndOf="@id/search_screen.sub_menu.first_item"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.sub_menu.first_item"/>
+                app:layout_constraintStart_toStartOf="@id/sub_menu.first_item"
+                app:layout_constraintEnd_toEndOf="@id/sub_menu.first_item"
+                app:layout_constraintTop_toBottomOf="@id/sub_menu.first_item"/>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/search_screen.sub_menu.second_item"
+                android:id="@+id/sub_menu.second_item"
                 android:layout_width="@dimen/search_screen.sub_menu.item.size"
                 android:layout_height="@dimen/search_screen.sub_menu.item.size"
                 android:clickable="true"
@@ -157,9 +157,9 @@
                 app:cardBackgroundColor="@color/blue"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
                 style="@style/Widget.Material3.CardView.Filled"
-                app:layout_constraintTop_toTopOf="@id/search_screen.sub_menu.first_item"
-                app:layout_constraintStart_toEndOf="@id/search_screen.sub_menu.first_item"
-                app:layout_constraintEnd_toStartOf="@id/search_screen.sub_menu.third_item">
+                app:layout_constraintTop_toTopOf="@id/sub_menu.first_item"
+                app:layout_constraintStart_toEndOf="@id/sub_menu.first_item"
+                app:layout_constraintEnd_toStartOf="@id/sub_menu.third_item">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -175,12 +175,12 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/Text2"
                 android:layout_marginTop="@dimen/search_screen.sub_menu.item.label.margin_top"
-                app:layout_constraintStart_toStartOf="@id/search_screen.sub_menu.second_item"
-                app:layout_constraintEnd_toEndOf="@id/search_screen.sub_menu.second_item"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.sub_menu.second_item"/>
+                app:layout_constraintStart_toStartOf="@id/sub_menu.second_item"
+                app:layout_constraintEnd_toEndOf="@id/sub_menu.second_item"
+                app:layout_constraintTop_toBottomOf="@id/sub_menu.second_item"/>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/search_screen.sub_menu.third_item"
+                android:id="@+id/sub_menu.third_item"
                 android:layout_width="@dimen/search_screen.sub_menu.item.size"
                 android:layout_height="@dimen/search_screen.sub_menu.item.size"
                 android:clickable="true"
@@ -189,9 +189,9 @@
                 app:cardBackgroundColor="@color/dark_blue"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
                 style="@style/Widget.Material3.CardView.Filled"
-                app:layout_constraintTop_toTopOf="@id/search_screen.sub_menu.second_item"
-                app:layout_constraintStart_toEndOf="@id/search_screen.sub_menu.second_item"
-                app:layout_constraintEnd_toStartOf="@id/search_screen.sub_menu.fourth_item">
+                app:layout_constraintTop_toTopOf="@id/sub_menu.second_item"
+                app:layout_constraintStart_toEndOf="@id/sub_menu.second_item"
+                app:layout_constraintEnd_toStartOf="@id/sub_menu.fourth_item">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -207,12 +207,12 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/Text2"
                 android:layout_marginTop="@dimen/search_screen.sub_menu.item.label.margin_top"
-                app:layout_constraintStart_toStartOf="@id/search_screen.sub_menu.third_item"
-                app:layout_constraintEnd_toEndOf="@id/search_screen.sub_menu.third_item"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.sub_menu.third_item"/>
+                app:layout_constraintStart_toStartOf="@id/sub_menu.third_item"
+                app:layout_constraintEnd_toEndOf="@id/sub_menu.third_item"
+                app:layout_constraintTop_toBottomOf="@id/sub_menu.third_item"/>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/search_screen.sub_menu.fourth_item"
+                android:id="@+id/sub_menu.fourth_item"
                 android:layout_width="@dimen/search_screen.sub_menu.item.size"
                 android:layout_height="@dimen/search_screen.sub_menu.item.size"
                 android:clickable="true"
@@ -222,8 +222,8 @@
                 app:cardBackgroundColor="@color/red"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
                 style="@style/Widget.Material3.CardView.Filled"
-                app:layout_constraintTop_toTopOf="@id/search_screen.sub_menu.third_item"
-                app:layout_constraintStart_toEndOf="@id/search_screen.sub_menu.third_item"
+                app:layout_constraintTop_toTopOf="@id/sub_menu.third_item"
+                app:layout_constraintStart_toEndOf="@id/sub_menu.third_item"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
@@ -240,12 +240,12 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/Text2"
                 android:layout_marginTop="@dimen/search_screen.sub_menu.item.label.margin_top"
-                app:layout_constraintStart_toStartOf="@id/search_screen.sub_menu.fourth_item"
-                app:layout_constraintEnd_toEndOf="@id/search_screen.sub_menu.fourth_item"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.sub_menu.fourth_item"/>
+                app:layout_constraintStart_toStartOf="@id/sub_menu.fourth_item"
+                app:layout_constraintEnd_toEndOf="@id/sub_menu.fourth_item"
+                app:layout_constraintTop_toBottomOf="@id/sub_menu.fourth_item"/>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/search_screen.suggestions_list"
+                android:id="@+id/suggestions_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:contentPadding="@dimen/search_screen.suggestions_list.padding"
@@ -254,7 +254,7 @@
                 style="@style/Widget.Material3.CardView.Filled"
                 app:cardCornerRadius="@dimen/home_screen.route_field.card.corner_radius"
                 app:cardBackgroundColor="@color/grey_3"
-                app:layout_constraintTop_toBottomOf="@id/search_screen.sub_menu.first_item">
+                app:layout_constraintTop_toBottomOf="@id/sub_menu.first_item">
 
                 <LinearLayout
                     android:layout_width="match_parent"
