@@ -16,6 +16,8 @@
 
     <!-- Empty fragments -->
     <dimen name="empty_fragment.image.height">220dp</dimen>
+    <dimen name="empty_fragment.image.vertical_bias">0.3</dimen>
+    <dimen name="empty_fragment.back_button.vertical_bias">0.3</dimen>
     <dimen name="empty_fragment.message.text_size">20sp</dimen>
 
     <!-- Home screen -->

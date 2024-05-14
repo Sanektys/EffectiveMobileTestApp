@@ -12,6 +12,7 @@
 
     <!-- Empty fragments -->
     <string name="empty_fragment.message.text">здесь ничего нет</string>
+    <string name="empty_fragment.back_button">вернуться назад</string>
 
     <!-- Home screen -->
     <string name="home_screen.title">Поиск дешёвых\nавиабилетов</string>
@@ -48,4 +49,6 @@
     <!-- All tickets list item -->
     <string name="all_tickets_list_item.dash" translatable="false">–</string>
     <string name="all_tickets_list_item.slash" translatable="false">/</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

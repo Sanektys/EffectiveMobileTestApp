@@ -69,4 +69,9 @@
         android:name="com.example.effectivemobiletestapp.ui.screens.all_tickets_list.AllTicketsListFragment"
         android:label="@string/navigation.label.all_tickets_list"
         tools:layout="@layout/fragment_all_tickets_list" />
+
+    <fragment
+        android:id="@+id/placeholder"
+        android:name="com.example.effectivemobiletestapp.ui.screens.empty_placeholder.EmptyPlaceholderFragment"
+        tools:layout="@layout/fragment_empty_placeholder"/>
 </navigation>
