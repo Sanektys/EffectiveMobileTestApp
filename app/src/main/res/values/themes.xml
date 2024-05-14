@@ -145,4 +145,13 @@
     <style name="DragHandleBottomSheet" parent="Widget.Material3.BottomSheet.DragHandle">
         <item name="tint">@color/grey_5</item>
     </style>
+
+    <!-- Card style -->
+    <style name="FilledCardStyle" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">@dimen/style.card.corner_radius</item>
+    </style>
+
+    <style name="ElevatedCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/style.card.corner_radius</item>
+    </style>
 </resources>

@@ -27,8 +27,7 @@
         android:layout_marginTop="@dimen/home_screen.route_field.card_bottom.margin_top"
         android:layout_marginHorizontal="@dimen/home_screen.common.margin_horizontal"
         app:contentPadding="@dimen/home_screen.route_field.card_bottom.padding"
-        style="@style/Widget.Material3.CardView.Filled"
-        app:cardCornerRadius="@dimen/home_screen.route_field.card.corner_radius"
+        style="@style/FilledCardStyle"
         app:cardBackgroundColor="@color/grey_3"
         app:layout_constraintTop_toBottomOf="@id/home_title">
 
@@ -39,8 +38,7 @@
             app:contentPaddingRight="@dimen/home_screen.route_field.card_top.padding_right"
             app:contentPaddingBottom="@dimen/home_screen.route_field.card_top.padding_vertical"
             app:contentPaddingLeft="@dimen/home_screen.route_field.card_top.padding_left"
-            style="@style/Widget.Material3.CardView.Elevated"
-            app:cardCornerRadius="@dimen/home_screen.route_field.card.corner_radius"
+            style="@style/ElevatedCardStyle"
             app:cardElevation="@dimen/home_screen.route_field.card.elevation"
             app:cardBackgroundColor="@color/grey_4">
 
@@ -62,9 +60,11 @@
                     android:id="@+id/country_from"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords|textAutoCorrect"
+                    android:inputType="text|textCapWords|textAutoCorrect"
                     android:imeOptions="actionNext"
-                    android:digits="АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
                     android:background="@null"
                     android:hint="@string/home_screen.route_field.country_from.hint"
                     android:textAppearance="@style/ButtonText1"

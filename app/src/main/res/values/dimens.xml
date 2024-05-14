@@ -5,6 +5,7 @@
     <dimen name="style.rounded_button_with_icon.corner_radius">20dp</dimen>
     <dimen name="style.rounded_button_with_icon.icon_padding">8dp</dimen>
     <dimen name="style.rounded_button_with_icon.padding_horizontal">10dp</dimen>
+    <dimen name="style.card.corner_radius">16dp</dimen>
 
     <!-- Font's sizes -->
     <dimen name="text_extra_large">22sp</dimen>
@@ -24,7 +25,6 @@
     <dimen name="home_screen.title.margin_horizontal">32dp</dimen>
     <dimen name="home_screen.route_field.card_bottom.margin_top">36dp</dimen>
     <dimen name="home_screen.route_field.card_bottom.padding">16dp</dimen>
-    <dimen name="home_screen.route_field.card.corner_radius">16dp</dimen>
     <dimen name="home_screen.route_field.card.elevation">8dp</dimen>
     <dimen name="home_screen.route_field.card_top.padding_vertical">16dp</dimen>
     <dimen name="home_screen.route_field.card_top.padding_right">16dp</dimen>
@@ -34,7 +34,7 @@
     <dimen name="home_screen.first_subtitle.margin_top">36dp</dimen>
     <dimen name="home_screen.list_of_suggestions.margin_top">20dp</dimen>
 
-    <!-- Home screen list of suggestions item -->
+    <!-- List of trips suggestions item -->
     <dimen name="list_of_suggestions_item.margin_end">16dp</dimen>
     <dimen name="list_of_suggestions_item.picture.size">132dp</dimen>
     <dimen name="list_of_suggestions_item.name.margin_top">8dp</dimen>
@@ -61,4 +61,31 @@
     <dimen name="search_screen.suggestions_list.item.icon.size">40dp</dimen>
     <dimen name="search_screen.suggestions_list.item.text_field.margin_start">48dp</dimen>
     <dimen name="search_screen.suggestions_list.divider.margin_bottom">8dp</dimen>
+
+    <!-- Selected country screen -->
+    <dimen name="selected_country_screen.common.margin_horizontal">16dp</dimen>
+    <dimen name="selected_country_screen.route_field.padding_vertical">16dp</dimen>
+    <dimen name="selected_country_screen.route_field.padding_end">16dp</dimen>
+    <dimen name="selected_country_screen.route_field.padding_start">8dp</dimen>
+    <dimen name="selected_country_screen.route_field.margin_top">48dp</dimen>
+    <dimen name="selected_country_screen.route_field.divider.margin_vertical">8dp</dimen>
+    <dimen name="selected_country_screen.route_field.divider.margin_start">8dp</dimen>
+    <dimen name="selected_country_screen.route_field.cross_icon.padding">6dp</dimen>
+    <dimen name="selected_country_screen.filters_group.margin_vertical">12dp</dimen>
+    <dimen name="selected_country_screen.filters_group.spacing_horizontal">8dp</dimen>
+    <dimen name="selected_country_screen.flights_card.padding">16dp</dimen>
+    <dimen name="selected_country_screen.flights_list.margin_top">8dp</dimen>
+    <dimen name="selected_country_screen.all_tickets_button.margin_vertical">24dp</dimen>
+    <dimen name="selected_country_screen.subscription_button.height">52dp</dimen>
+    <dimen name="selected_country_screen.subscription_button.margin_start">16dp</dimen>
+    <dimen name="selected_country_screen.subscription_button.margin_end">8dp</dimen>
+    <dimen name="selected_country_screen.subscription_button.title.margin_start">8dp</dimen>
+
+    <!-- List of tickets suggestions item -->
+    <dimen name="tickets_suggestions.item.dot.size">24dp</dimen>
+    <dimen name="tickets_suggestions.item.dot.margin_top">8dp</dimen>
+    <dimen name="tickets_suggestions.item.dot.margin_end">8dp</dimen>
+    <dimen name="tickets_suggestions.item.title.margin_end">8dp</dimen>
+    <dimen name="tickets_suggestions.item.flights_sequence.margin_top">4dp</dimen>
+    <dimen name="tickets_suggestions.item.divider.margin_top">8dp</dimen>
 </resources>

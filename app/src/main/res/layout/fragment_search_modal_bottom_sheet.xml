@@ -26,8 +26,7 @@
                 android:layout_height="match_parent"
                 app:contentPadding="@dimen/search_screen.route_field.card.padding"
                 android:layout_marginHorizontal="@dimen/search_screen.common.margin_horizontal"
-                style="@style/Widget.Material3.CardView.Filled"
-                app:cardCornerRadius="@dimen/home_screen.route_field.card.corner_radius"
+                style="@style/FilledCardStyle"
                 app:cardBackgroundColor="@color/grey_3">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,8 +81,11 @@
                         android:id="@+id/country_to"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:inputType="textCapWords|textAutoCorrect"
-                        android:digits="АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя -"
+                        android:inputType="text|textCapWords|textAutoCorrect"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="true"
                         android:importantForAutofill="no"
                         android:hint="@string/home_screen.route_field.country_to.hint"
                         android:textAppearance="@style/ButtonText1"
@@ -251,8 +253,7 @@
                 app:contentPadding="@dimen/search_screen.suggestions_list.padding"
                 android:layout_marginHorizontal="@dimen/search_screen.common.margin_horizontal"
                 android:layout_marginTop="@dimen/search_screen.suggestions_list.margin_top"
-                style="@style/Widget.Material3.CardView.Filled"
-                app:cardCornerRadius="@dimen/home_screen.route_field.card.corner_radius"
+                style="@style/FilledCardStyle"
                 app:cardBackgroundColor="@color/grey_3"
                 app:layout_constraintTop_toBottomOf="@id/sub_menu.first_item">
 
