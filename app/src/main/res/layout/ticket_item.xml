@@ -10,11 +10,11 @@
         android:id="@+id/badge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:contentPaddingTop="2dp"
-        app:contentPaddingBottom="2dp"
-        app:contentPaddingLeft="10dp"
-        app:contentPaddingRight="10dp"
-        app:cardCornerRadius="16dp"
+        app:contentPaddingTop="@dimen/all_tickets_list_item.badge.padding_vertical"
+        app:contentPaddingBottom="@dimen/all_tickets_list_item.badge.padding_vertical"
+        app:contentPaddingLeft="@dimen/all_tickets_list_item.badge.padding_horizontal"
+        app:contentPaddingRight="@dimen/all_tickets_list_item.badge.padding_horizontal"
+        app:cardCornerRadius="@dimen/style.card.corner_radius"
         app:cardBackgroundColor="@color/blue">
 
         <TextView
@@ -28,26 +28,26 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/all_tickets_list_item.card.padding"
         android:background="@drawable/rounded_background_shape"
         android:backgroundTint="@color/grey_1"
-        android:layout_marginTop="-16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginTop="@dimen/all_tickets_list_item.card.margin_top"
+        android:layout_marginBottom="@dimen/all_tickets_list_item.card.margin_bottom">
 
         <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title1"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/all_tickets_list_item.price.margin_top"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="8 566 ₽"/>
 
         <ImageView
             android:id="@+id/dot"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/all_tickets_list_item.dot.size"
+            android:layout_height="@dimen/all_tickets_list_item.dot.size"
             android:src="@drawable/dot_shape"
             app:tint="@color/red"
             app:layout_constraintTop_toTopOf="@id/time_from"
@@ -60,8 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title4"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/all_tickets_list_item.time_from.margin_start"
+            android:layout_marginTop="@dimen/all_tickets_list_item.time_from.margin_top"
             app:layout_constraintStart_toEndOf="@id/dot"
             app:layout_constraintTop_toBottomOf="@id/price"
             tools:text="17:45"/>
@@ -72,8 +72,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title3"
             android:textColor="@color/grey_6"
-            android:text="–"
-            android:layout_marginStart="4dp"
+            android:text="@string/all_tickets_list_item.dash"
+            android:layout_marginStart="@dimen/all_tickets_list_item.symbol.margin_horizontal"
             app:layout_constraintStart_toEndOf="@id/time_from"
             app:layout_constraintBottom_toBottomOf="@id/time_from" />
 
@@ -82,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title4"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="@dimen/all_tickets_list_item.symbol.margin_horizontal"
             app:layout_constraintStart_toEndOf="@id/dash"
             app:layout_constraintTop_toTopOf="@id/time_from"
             tools:text="21:20"/>
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title4"
             android:textColor="@color/grey_6"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/all_tickets_list_item.codes.margin_top"
             app:layout_constraintStart_toStartOf="@id/time_from"
             app:layout_constraintTop_toBottomOf="@id/time_from"
             tools:text="DME" />
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Title4"
             android:textColor="@color/grey_6"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/all_tickets_list_item.codes.margin_top"
             app:layout_constraintStart_toStartOf="@id/time_to"
             app:layout_constraintTop_toBottomOf="@id/time_to"
             tools:text="AER" />
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Text2"
             android:maxLines="1"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/all_tickets_list_item.flight_duration.margin_start"
             app:layout_constraintStart_toEndOf="@id/time_to"
             app:layout_constraintTop_toTopOf="@id/time_to"
             tools:text="3.5ч в пути" />
@@ -126,8 +126,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Text2"
             android:textColor="@color/grey_6"
-            android:text="/"
-            android:layout_marginStart="4dp"
+            android:text="@string/all_tickets_list_item.slash"
+            android:layout_marginStart="@dimen/all_tickets_list_item.symbol.margin_horizontal"
             app:layout_constraintStart_toEndOf="@id/flight_duration"
             app:layout_constraintTop_toTopOf="@id/flight_duration" />
 
@@ -136,7 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Text2"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="@dimen/all_tickets_list_item.symbol.margin_horizontal"
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintStart_toEndOf="@id/slash"

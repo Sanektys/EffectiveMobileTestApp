@@ -40,4 +40,12 @@
     <string name="selected_country_screen.flights_card.title">Прямые рейсы</string>
     <string name="selected_country_screen.all_tickets_button.title">Посмотреть все билеты</string>
     <string name="selected_country_screen.subscription_button.title">Подписка на цену</string>
+
+    <!-- All tickets screen -->
+    <string name="all_tickets.action_button_group.left_button.label">Фильтр</string>
+    <string name="all_tickets.action_button_group.right_button.label">График цен</string>
+
+    <!-- All tickets list item -->
+    <string name="all_tickets_list_item.dash" translatable="false">–</string>
+    <string name="all_tickets_list_item.slash" translatable="false">/</string>
 </resources>

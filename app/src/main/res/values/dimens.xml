@@ -88,4 +88,28 @@
     <dimen name="tickets_suggestions.item.title.margin_end">8dp</dimen>
     <dimen name="tickets_suggestions.item.flights_sequence.margin_top">4dp</dimen>
     <dimen name="tickets_suggestions.item.divider.margin_top">8dp</dimen>
+
+    <!-- All tickets screen -->
+    <dimen name="all_tickets.common.margin_horizontal">16dp</dimen>
+    <dimen name="all_tickets.flight_info.padding_vertical">8dp</dimen>
+    <dimen name="all_tickets.flight_info.margin_top">16dp</dimen>
+    <dimen name="all_tickets.flight_info.text_field.margin_start">8dp</dimen>
+    <dimen name="all_tickets.flight.info.specification.margin_top">4dp</dimen>
+    <dimen name="all_tickets.all_tickets_list.margin_top">24dp</dimen>
+    <dimen name="all_tickets.all_tickets_list.margin_bottom">-24dp</dimen>
+    <dimen name="all_tickets.action_button_group.margin_bottom">16dp</dimen>
+
+    <!-- All tickets list item -->
+    <dimen name="all_tickets_list_item.badge.padding_vertical">2dp</dimen>
+    <dimen name="all_tickets_list_item.badge.padding_horizontal">10dp</dimen>
+    <dimen name="all_tickets_list_item.card.padding">16dp</dimen>
+    <dimen name="all_tickets_list_item.card.margin_top">-16dp</dimen>
+    <dimen name="all_tickets_list_item.card.margin_bottom">16dp</dimen>
+    <dimen name="all_tickets_list_item.price.margin_top">4dp</dimen>
+    <dimen name="all_tickets_list_item.dot.size">24dp</dimen>
+    <dimen name="all_tickets_list_item.time_from.margin_top">16dp</dimen>
+    <dimen name="all_tickets_list_item.time_from.margin_start">8dp</dimen>
+    <dimen name="all_tickets_list_item.symbol.margin_horizontal">4dp</dimen>
+    <dimen name="all_tickets_list_item.codes.margin_top">4dp</dimen>
+    <dimen name="all_tickets_list_item.flight_duration.margin_start">16dp</dimen>
 </resources>
