@@ -4,30 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.hotels.HotelsFragment">
+    tools:context=".ui.screens.profile.ProfileFragment">
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
+    <ImageView
+        android:id="@+id/empty_page_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/empty_fragment.image.height"
+        android:src="@drawable/empty_page"
+        app:tint="@color/grey_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/text_home1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Фильтр"
-            app:icon="@drawable/filter_icon"
-            style="@style/ButtonBlueInToggleGroup" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/text_home2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="График цен"
-            app:icon="@drawable/chart_icon"
-            style="@style/ButtonBlueInToggleGroup" />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_fragment.message.text"
+        android:textColor="@color/grey_5"
+        android:textAppearance="@style/Title2"
+        app:layout_constraintTop_toBottomOf="@id/empty_page_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
