@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(R.id.action_navigation_home_to_selectedCountryFragment)
     }
 
+    fun openAllTicketsScreen() {
+        navController.navigate(R.id.action_selectedCountryFragment_to_allTicketsListFragment)
+    }
+
     fun popBackStack() {
         navController.popBackStack()
     }

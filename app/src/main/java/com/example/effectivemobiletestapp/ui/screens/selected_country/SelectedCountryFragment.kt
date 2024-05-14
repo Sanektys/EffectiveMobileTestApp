@@ -19,6 +19,10 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
         _binding = FragmentSelectedCountryBinding.bind(view)
 
         initializeRouteFieldComponents()
+
+        binding.allTicketsButton.setOnClickListener {
+            (requireActivity() as MainActivity).openAllTicketsScreen()
+        }
     }
 
     override fun onDestroyView() {
