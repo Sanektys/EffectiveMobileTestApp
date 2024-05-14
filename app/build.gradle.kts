@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinKsp)
 }
 
 android {
@@ -59,6 +60,21 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
     implementation(libs.legacy.support.v4)
+
+    // Dagger
+    implementation(libs.dagger.android)
+    ksp(libs.dagger.android.processor)
+
+    // Retrofit
+    implementation(libs.retrofit)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
+    // AdapterDelegates
+    implementation(libs.adapterdelegates.viewbinding)
 
     // Tests
     testImplementation(libs.junit)
