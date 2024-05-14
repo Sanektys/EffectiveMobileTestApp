@@ -2,6 +2,7 @@ package com.example.effectivemobiletestapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -24,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val navHost = supportFragmentManager
             .findFragmentById(R.id.activity_main_navigation_fragment) as NavHostFragment
-        val navController = navHost.navController
+        navController = navHost.navController
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -36,5 +39,13 @@ class MainActivity : AppCompatActivity() {
 //        )
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    fun openSelectedCountryScreen() {
+        navController.navigate(R.id.action_navigation_home_to_selectedCountryFragment)
+    }
+
+    fun popBackStack() {
+        navController.popBackStack()
     }
 }
