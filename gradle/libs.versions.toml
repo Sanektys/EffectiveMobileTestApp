@@ -57,7 +57,7 @@ navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fr
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 
 dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "daggerAndroid" }
-dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroid" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerAndroid" }
 
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
@@ -77,4 +77,5 @@ legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", ver
 androidApplication = { id = "com.android.application", version.ref = "androidPlugin" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinPlugin" }
 kotlinKsp = { id = "com.google.devtools.ksp", version.ref = "kspPlugin" }
+room = { id = "androidx.room", version.ref = "room"}
 

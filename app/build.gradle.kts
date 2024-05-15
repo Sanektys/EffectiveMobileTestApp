@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kotlinKsp)
+    alias(libs.plugins.room)
 }
 
 android {
@@ -38,6 +39,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -63,7 +68,7 @@ dependencies {
 
     // Dagger
     implementation(libs.dagger.android)
-    ksp(libs.dagger.android.processor)
+    ksp(libs.dagger.compiler)
 
     // Retrofit
     implementation(libs.retrofit)
