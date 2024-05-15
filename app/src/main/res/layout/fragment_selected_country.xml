@@ -133,7 +133,7 @@
                     android:id="@+id/date_chip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/selected_country_screen.filters_group.item.second.label" />
+                    tools:text="@string/selected_country_screen.filters_group.item.second.label" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/class_chip"
