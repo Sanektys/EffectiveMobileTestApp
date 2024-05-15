@@ -78,17 +78,24 @@
                     app:layout_constraintStart_toEndOf="@id/back_arrow_icon"
                     app:layout_constraintEnd_toEndOf="parent"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/country_to"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:inputType="text|textCapWords|textAutoCorrect"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:background="@null"
                     android:hint="@string/home_screen.route_field.country_to.hint"
                     android:textAppearance="@style/ButtonText1"
+                    android:importantForAutofill="no"
                     android:layout_marginTop="@dimen/selected_country_screen.route_field.divider.margin_vertical"
                     app:layout_constraintStart_toStartOf="@id/search_horizontal_divider"
                     app:layout_constraintEnd_toStartOf="@id/cross_icon"
                     app:layout_constraintTop_toTopOf="@id/search_horizontal_divider"
-                    tools:text="Сочи"/>
+                    tools:text="Сочи" />
 
                 <ImageView
                     android:id="@+id/cross_icon"

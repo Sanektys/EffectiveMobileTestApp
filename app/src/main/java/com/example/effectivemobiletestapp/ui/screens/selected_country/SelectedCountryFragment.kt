@@ -1,6 +1,8 @@
 package com.example.effectivemobiletestapp.ui.screens.selected_country
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.text.format.DateFormat
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -10,6 +12,7 @@ import com.example.effectivemobiletestapp.R
 import com.example.effectivemobiletestapp.databinding.FragmentSelectedCountryBinding
 import com.example.effectivemobiletestapp.ui.MainActivity
 import com.example.effectivemobiletestapp.ui.screens.all_tickets_list.AllTicketsListFragment
+import com.example.effectivemobiletestapp.ui.utils.CyrillicTextFilter
 import com.example.effectivemobiletestapp.ui.utils.DatePickerDialogBuilder
 import kotlinx.coroutines.launch
 
@@ -47,7 +50,7 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
             (requireActivity() as MainActivity).popBackStack()
         }
         binding.crossIcon.setOnClickListener {
-            (requireActivity() as MainActivity).popBackStack()
+            viewModel.setCountryTo("")
         }
         binding.swapCountriesIcon.setOnClickListener {
             val temp = viewModel.countryFrom.value
@@ -55,14 +58,31 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
             viewModel.setCountryTo(temp)
         }
 
+        binding.countryTo.let { countryTo ->
+            countryTo.filters = arrayOf(CyrillicTextFilter)
+
+            countryTo.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    val newInput = s.toString()
+                    if (newInput != viewModel.countryTo.value) {
+                        viewModel.setCountryTo(newInput)
+                    }
+                }
+                override fun afterTextChanged(s: Editable?) {}
+            })
+
+            viewLifecycleOwner.lifecycleScope.launch {
+                viewModel.countryTo.collect { value ->
+                    countryTo.setText(value)
+                    countryTo.setSelection(value.length)
+                }
+            }
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.countryFrom.collect { value ->
                 binding.countryFrom.text = value
-            }
-        }
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.countryTo.collect { value ->
-                binding.countryTo.text = value
             }
         }
     }
@@ -96,6 +116,8 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
     }
 
     private fun openAllTicketsListScreen() {
+        if (viewModel.countryTo.value.length < MINIMUM_COUNTRY_NAME_LENGTH) return
+
         val bundle = Bundle().apply {
             val flightRoute = "${viewModel.countryFrom.value}-${viewModel.countryTo.value}"
             putString(AllTicketsListFragment.KEY_FLIGHT_ROUTE, flightRoute)
@@ -113,5 +135,7 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
     companion object {
         const val KEY_COUNTRY_FROM = "countryFromKey"
         const val KEY_COUNTRY_TO = "countryToKey"
+
+        const val MINIMUM_COUNTRY_NAME_LENGTH = 3
     }
 }
