@@ -1,13 +1,17 @@
 package com.example.effectivemobiletestapp.ui.screens.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val _countryFrom = MutableStateFlow("")
+    val countryFrom = _countryFrom.asStateFlow()
+
+
+    fun setCountryFrom(country: String) {
+        _countryFrom.value = country
     }
-    val text: LiveData<String> = _text
 }

@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
+import androidx.lifecycle.lifecycleScope
 import com.example.effectivemobiletestapp.databinding.FragmentAllTicketsListBinding
 import com.example.effectivemobiletestapp.ui.MainActivity
+import kotlinx.coroutines.launch
 
 class AllTicketsListFragment : Fragment() {
 
@@ -26,10 +27,15 @@ class AllTicketsListFragment : Fragment() {
     ): View {
         _binding = FragmentAllTicketsListBinding.inflate(inflater, container, false)
 
+        viewModel.setFlightRoute(arguments?.getString(KEY_FLIGHT_ROUTE) ?: "")
+        viewModel.setFlightSpecification(arguments?.getString(KEY_FLIGHT_SPECIFICATION) ?: "")
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupFlightInfo()
+
         binding.backArrowIcon.setOnClickListener {
             (requireActivity() as MainActivity).popBackStack()
         }
@@ -39,5 +45,24 @@ class AllTicketsListFragment : Fragment() {
         super.onDestroyView()
 
         _binding = null
+    }
+
+    private fun setupFlightInfo() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.flightRoute.collect { value ->
+                binding.flightInfoRoute.text = value
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.flightSpecification.collect { value ->
+                binding.flightInfoSpecification.text = value
+            }
+        }
+    }
+
+
+    companion object {
+        const val KEY_FLIGHT_ROUTE = "flightRouteKey"
+        const val KEY_FLIGHT_SPECIFICATION = "flightSpecificationKey"
     }
 }

@@ -2,13 +2,14 @@ package com.example.effectivemobiletestapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.effectivemobiletestapp.R
 import com.example.effectivemobiletestapp.databinding.ActivityMainBinding
+import com.example.effectivemobiletestapp.ui.screens.search.SearchModalBottomSheet
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var navController: NavController
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,24 +31,25 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.activity_main_navigation_fragment) as NavHostFragment
         navController = navHost.navController
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        val appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.navigation_home, R.id.navigation_hotels, R.id.navigation_shortly,
-//                R.id.navigation_subscriptions, R.id.navigation_profile
-//            )
-//        )
-//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
-    fun openSelectedCountryScreen() {
-        navController.navigate(R.id.action_navigation_home_to_selectedCountryFragment)
+    fun showSearchDialog(fragmentManager: FragmentManager, bundle: Bundle) {
+        if (fragmentManager.findFragmentByTag(SearchModalBottomSheet.TAG) != null) return
+
+        SearchModalBottomSheet().let { dialog ->
+            dialog.arguments = bundle
+            dialog.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetDialogTheme)
+            dialog.show(fragmentManager, SearchModalBottomSheet.TAG)
+        }
     }
 
-    fun openAllTicketsScreen() {
-        navController.navigate(R.id.action_selectedCountryFragment_to_allTicketsListFragment)
+    fun openSelectedCountryScreen(bundle: Bundle) {
+        navController.navigate(R.id.action_navigation_home_to_selectedCountryFragment, bundle)
+    }
+
+    fun openAllTicketsScreen(bundle: Bundle) {
+        navController.navigate(R.id.action_selectedCountryFragment_to_allTicketsListFragment, bundle)
     }
 
     fun openEmptyPlaceholderScreen() {

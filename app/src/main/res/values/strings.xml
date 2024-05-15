@@ -37,6 +37,7 @@
     <string name="selected_country_screen.filters_group.item.first.label">обратно</string>
     <string name="selected_country_screen.filters_group.item.second.label">24 фев, сб</string>
     <string name="selected_country_screen.filters_group.item.third.label">1,эконом</string>
+    <string name="selected_country_screen.filters_group.item.third.label_variant">1 пассажир</string>
     <string name="selected_country_screen.filters_group.item.fourth.label">фильтры</string>
     <string name="selected_country_screen.flights_card.title">Прямые рейсы</string>
     <string name="selected_country_screen.all_tickets_button.title">Посмотреть все билеты</string>
