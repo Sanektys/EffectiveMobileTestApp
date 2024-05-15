@@ -2,7 +2,7 @@
 # General plugins
 androidPlugin = "8.2.2"
 kotlinPlugin = "1.9.22"
-kspPlugin = "1.9.24-1.0.20"
+kspPlugin = "1.9.22-1.0.17"
 
 # General
 appcompat = "1.6.1"

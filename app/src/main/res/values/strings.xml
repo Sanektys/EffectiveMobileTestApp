@@ -49,6 +49,7 @@
     <!-- All tickets list item -->
     <string name="all_tickets_list_item.dash" translatable="false">–</string>
     <string name="all_tickets_list_item.slash" translatable="false">/</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Date picker -->
+    <string name="date_picker.title">Установите другую дату</string>
 </resources>

@@ -263,6 +263,7 @@
                     android:orientation="vertical">
 
                     <FrameLayout
+                        android:id="@+id/suggestions_list.first_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackground"
@@ -302,6 +303,7 @@
                         app:dividerColor="@color/grey_4"/>
 
                     <FrameLayout
+                        android:id="@+id/suggestions_list.second_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackground"
@@ -341,6 +343,7 @@
                         app:dividerColor="@color/grey_4"/>
 
                     <FrameLayout
+                        android:id="@+id/suggestions_list.third_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackground"

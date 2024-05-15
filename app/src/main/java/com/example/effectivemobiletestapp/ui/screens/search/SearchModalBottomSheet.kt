@@ -12,6 +12,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
+
 class SearchModalBottomSheet : BottomSheetDialogFragment(R.layout.fragment_search_modal_bottom_sheet) {
 
     private var _binding: FragmentSearchModalBottomSheetBinding? = null
@@ -27,6 +28,8 @@ class SearchModalBottomSheet : BottomSheetDialogFragment(R.layout.fragment_searc
         (dialog as BottomSheetDialog).behavior.state = BottomSheetBehavior.STATE_EXPANDED
 
         initializeRouteFieldComponents()
+        initializeSubMenu()
+        initializeSuggestionsList()
     }
 
     override fun onDestroyView() {
@@ -41,7 +44,7 @@ class SearchModalBottomSheet : BottomSheetDialogFragment(R.layout.fragment_searc
                 return@setOnEditorActionListener when (actionId) {
                     EditorInfo.IME_ACTION_SEARCH -> {
                         if (countryTo.length() >= MINIMUM_COUNTRY_NAME_LENGTH) {
-                            (requireActivity() as MainActivity).openSelectedCountryScreen()
+                            openSelectedCountryScreen()
                         }
                         true
                     }
@@ -50,6 +53,54 @@ class SearchModalBottomSheet : BottomSheetDialogFragment(R.layout.fragment_searc
             }
             countryTo.filters = arrayOf(CyrillicTextFilter)
         }
+
+        binding.crossIcon.setOnClickListener {
+            binding.countryTo.setText("")
+        }
+    }
+
+    private fun initializeSubMenu() {
+        val activity = requireActivity() as MainActivity
+
+        binding.subMenuFirstItem.setOnClickListener {
+            activity.openEmptyPlaceholderScreen()
+        }
+        binding.subMenuSecondItem.setOnClickListener {
+            binding.countryTo.setText(
+                resources.getString(R.string.search_screen_sub_menu_second_item_label)
+            )
+        }
+        binding.subMenuThirdItem.setOnClickListener {
+            activity.openEmptyPlaceholderScreen()
+        }
+        binding.subMenuFourthItem.setOnClickListener {
+            activity.openEmptyPlaceholderScreen()
+        }
+    }
+
+    private fun initializeSuggestionsList() {
+        binding.suggestionsListFirstItem.setOnClickListener {
+            binding.countryTo.setText(
+                resources.getString(R.string.search_screen_suggestions_list_first_item_title)
+            )
+            openSelectedCountryScreen()
+        }
+        binding.suggestionsListSecondItem.setOnClickListener {
+            binding.countryTo.setText(
+                resources.getString(R.string.search_screen_suggestions_list_second_item_title)
+            )
+            openSelectedCountryScreen()
+        }
+        binding.suggestionsListThirdItem.setOnClickListener {
+            binding.countryTo.setText(
+                resources.getString(R.string.search_screen_suggestions_list_third_item_title)
+            )
+            openSelectedCountryScreen()
+        }
+    }
+
+    private fun openSelectedCountryScreen() {
+        (requireActivity() as MainActivity).openSelectedCountryScreen()
     }
 
 
