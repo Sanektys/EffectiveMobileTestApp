@@ -58,6 +58,8 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun getOffersList() = viewModelScope.launch {
-        _offersList.value = apiInteractor.getOffersList()
+        try {
+            _offersList.value = apiInteractor.getOffersList()
+        } catch (_: Exception) {}
     }
 }

@@ -43,7 +43,9 @@ class AllTicketsListViewModel : ViewModel() {
 
     private fun getTicketsList() {
         viewModelScope.launch {
-            _ticketsList.value = apiInteractor.getTicketsList()
+            try {
+                _ticketsList.value = apiInteractor.getTicketsList()
+            } catch (_: Exception) {}
         }
     }
 }

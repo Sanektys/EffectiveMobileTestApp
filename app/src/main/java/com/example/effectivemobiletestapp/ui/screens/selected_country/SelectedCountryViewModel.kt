@@ -50,9 +50,12 @@ class SelectedCountryViewModel : ViewModel() {
 
     private fun getTicketsOffersList() {
         viewModelScope.launch {
-            val max = MAX_ELEMENTS_IN_TICKETS_OFFERS_LIST
-            val newList = apiInteractor.getTicketsOffersList()
-            _ticketsOffersList.value = if (newList.size > max) newList.subList(0, max) else newList
+            try {
+                val max = MAX_ELEMENTS_IN_TICKETS_OFFERS_LIST
+                val newList = apiInteractor.getTicketsOffersList()
+                _ticketsOffersList.value =
+                    if (newList.size > max) newList.subList(0, max) else newList
+            } catch (_: Exception) {}
         }
     }
 
