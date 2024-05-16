@@ -1,12 +1,13 @@
-package com.example.effectivemobiletestapp.di
+package com.example.effectivemobiletestapp.di.modules
 
 import android.content.Context
 import androidx.room.Room
+import com.example.effectivemobiletestapp.di.ApplicationScope
 import com.example.effectivemobiletestapp.domain.DatabaseRepository
 import com.example.effectivemobiletestapp.repository.db.DatabaseRepositoryImpl
-import com.example.effectivemobiletestapp.repository.db.routeDatabase.RouteDatabase
-import com.example.effectivemobiletestapp.repository.db.routeDatabase.RouteDatabaseContract
-import com.example.effectivemobiletestapp.repository.db.routeDatabase.RouteInfoDao
+import com.example.effectivemobiletestapp.repository.db.route_database.RouteDatabase
+import com.example.effectivemobiletestapp.repository.db.route_database.RouteDatabaseContract
+import com.example.effectivemobiletestapp.repository.db.route_database.RouteInfoDao
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

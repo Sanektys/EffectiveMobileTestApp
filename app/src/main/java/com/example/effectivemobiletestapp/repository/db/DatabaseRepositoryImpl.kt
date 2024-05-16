@@ -1,7 +1,7 @@
 package com.example.effectivemobiletestapp.repository.db
 
 import com.example.effectivemobiletestapp.domain.DatabaseRepository
-import com.example.effectivemobiletestapp.repository.db.routeDatabase.RouteDatabaseContract
+import com.example.effectivemobiletestapp.repository.db.route_database.RouteDatabaseContract
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged

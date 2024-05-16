@@ -10,9 +10,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.effectivemobiletestapp.R
 import com.example.effectivemobiletestapp.databinding.FragmentHomeBinding
+import com.example.effectivemobiletestapp.domain.entities.OfferItemDto
 import com.example.effectivemobiletestapp.ui.MainActivity
 import com.example.effectivemobiletestapp.ui.screens.search.SearchModalBottomSheet
 import com.example.effectivemobiletestapp.ui.utils.CyrillicTextFilter
+import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import kotlinx.coroutines.launch
 
 
@@ -23,17 +25,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val viewModel by lazy { ViewModelProvider(this).get(HomeViewModel::class.java) }
 
+    private var recyclerAdapter: ListDelegationAdapter<List<OfferItemDto>>? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentHomeBinding.bind(view)
 
         initializeRouteFieldComponents()
+        initializeRecycler()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
 
         _binding = null
+        recyclerAdapter = null
     }
 
     private fun showSearchDialog() {
@@ -82,6 +88,17 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
         binding.countryTo.setOnClickListener {
             showSearchDialog()
+        }
+    }
+
+    private fun initializeRecycler() {
+        recyclerAdapter = ListDelegationAdapter(offersAdapterDelegate())
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.offersList.collect { newList ->
+                recyclerAdapter?.items = newList
+                binding.listOfTripsSuggestions.adapter = recyclerAdapter
+            }
         }
     }
 

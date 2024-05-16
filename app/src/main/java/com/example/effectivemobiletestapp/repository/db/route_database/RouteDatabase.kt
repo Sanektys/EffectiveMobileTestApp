@@ -1,4 +1,4 @@
-package com.example.effectivemobiletestapp.repository.db.routeDatabase
+package com.example.effectivemobiletestapp.repository.db.route_database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

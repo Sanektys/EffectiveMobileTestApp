@@ -35,9 +35,10 @@
     <dimen name="home_screen.route_field.divider.margin_vertical">8dp</dimen>
     <dimen name="home_screen.first_subtitle.margin_top">36dp</dimen>
     <dimen name="home_screen.list_of_suggestions.margin_top">20dp</dimen>
+    <dimen name="home_screen.list_of_suggestions.padding_horizontal">8dp</dimen>
 
     <!-- List of trips suggestions item -->
-    <dimen name="list_of_suggestions_item.margin_end">16dp</dimen>
+    <dimen name="list_of_suggestions_item.margin_horizontal">8dp</dimen>
     <dimen name="list_of_suggestions_item.picture.size">132dp</dimen>
     <dimen name="list_of_suggestions_item.name.margin_top">8dp</dimen>
     <dimen name="list_of_suggestions_item.location.margin_top">8dp</dimen>

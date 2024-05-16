@@ -3,6 +3,8 @@ package com.example.effectivemobiletestapp.ui.screens.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.effectivemobiletestapp.App
+import com.example.effectivemobiletestapp.domain.entities.OfferItemDto
+import com.example.effectivemobiletestapp.domain.interactors.ApiInteractor
 import com.example.effectivemobiletestapp.domain.interactors.DbInteractor
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,14 +16,20 @@ class HomeViewModel : ViewModel() {
 
     @Inject
     lateinit var dbInteractor: DbInteractor
+    @Inject
+    lateinit var apiInteractor: ApiInteractor
 
     private val _countryFrom = MutableStateFlow("")
     val countryFrom = _countryFrom.asStateFlow()
+
+    private val _offersList = MutableStateFlow(listOf<OfferItemDto>())
+    val offersList = _offersList.asStateFlow()
 
 
     init {
         App.instance.appComponent.inject(this)
 
+        getOffersList()
         getLatestEnteredCountry()
         observeToSetLatestEnteredCountry()
     }
@@ -47,5 +55,9 @@ class HomeViewModel : ViewModel() {
                 }
             }
         }
+    }
+
+    private fun getOffersList() = viewModelScope.launch {
+        _offersList.value = apiInteractor.getOffersList()
     }
 }

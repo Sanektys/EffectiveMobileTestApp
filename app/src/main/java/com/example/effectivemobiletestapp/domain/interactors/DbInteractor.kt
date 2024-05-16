@@ -7,8 +7,6 @@ import javax.inject.Inject
 
 class DbInteractor @Inject constructor(private val databaseRepository: DatabaseRepository) {
 
-    suspend fun retrieveLatestCountryFrom(): String = databaseRepository.retrieveLatestCountryFrom()
-
     fun observeLatestCountryFrom(): Flow<String> = databaseRepository.observeLatestCountryFrom()
 
     suspend fun changeLatestCountryFrom(country: String)
