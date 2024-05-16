@@ -43,6 +43,9 @@
     <string name="selected_country_screen.all_tickets_button.title">Посмотреть все билеты</string>
     <string name="selected_country_screen.subscription_button.title">Подписка на цену</string>
 
+    <!-- Selected country screen list of tickets suggestions item -->
+    <string name="tickets_suggestions_item.price">%s ₽</string>
+
     <!-- All tickets screen -->
     <string name="all_tickets.action_button_group.left_button.label">Фильтр</string>
     <string name="all_tickets.action_button_group.right_button.label">График цен</string>

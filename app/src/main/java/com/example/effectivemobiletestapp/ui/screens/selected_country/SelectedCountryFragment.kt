@@ -10,10 +10,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.effectivemobiletestapp.R
 import com.example.effectivemobiletestapp.databinding.FragmentSelectedCountryBinding
+import com.example.effectivemobiletestapp.domain.entities.TicketOfferItemDto
 import com.example.effectivemobiletestapp.ui.MainActivity
 import com.example.effectivemobiletestapp.ui.screens.all_tickets_list.AllTicketsListFragment
 import com.example.effectivemobiletestapp.ui.utils.CyrillicTextFilter
 import com.example.effectivemobiletestapp.ui.utils.DatePickerDialogBuilder
+import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import kotlinx.coroutines.launch
 
 
@@ -24,6 +26,8 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
 
     private val viewModel by lazy { ViewModelProvider(this).get( SelectedCountryViewModel::class.java )}
 
+    private var recyclerAdapter: ListDelegationAdapter<List<TicketOfferItemDto>>? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentSelectedCountryBinding.bind(view)
@@ -33,6 +37,7 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
 
         initializeRouteFieldComponents()
         initializeFiltersGroup()
+        initializeRecycler()
 
         binding.allTicketsButton.setOnClickListener {
             openAllTicketsListScreen()
@@ -43,6 +48,7 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
         super.onDestroyView()
 
         _binding = null
+        recyclerAdapter = null
     }
 
     private fun initializeRouteFieldComponents() {
@@ -129,6 +135,17 @@ class SelectedCountryFragment : Fragment(R.layout.fragment_selected_country) {
         }
 
         (requireActivity() as MainActivity).openAllTicketsScreen(bundle = bundle)
+    }
+
+    private fun initializeRecycler() {
+        recyclerAdapter = ListDelegationAdapter(ticketsOffersAdapterDelegate())
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.ticketsOffersList.collect { newList ->
+                recyclerAdapter?.items = newList
+                binding.flightsList.adapter = recyclerAdapter
+            }
+        }
     }
 
 
