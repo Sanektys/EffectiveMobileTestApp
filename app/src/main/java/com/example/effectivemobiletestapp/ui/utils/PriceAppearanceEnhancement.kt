@@ -6,8 +6,8 @@ fun arrangeDigits(price: Int): String {
     val arranged = StringBuilder(original)
 
     for (i in original.indices) {
-        if (i % 3 == 0 && i + 1 < original.length) {
-            arranged.insert(i + 1, ' ')
+        if (i % 3 == 0) {
+            arranged.insert(original.length - i, ' ')
         }
     }
     return arranged.toString()

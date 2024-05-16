@@ -266,7 +266,7 @@
                         android:id="@+id/suggestions_list.first_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackground"
+                        android:background="@drawable/ripple_background_for_round_shape"
                         android:paddingVertical="@dimen/search_screen.suggestions_list.item.padding_vertical"
                         android:clickable="true"
                         android:focusable="true">
@@ -306,7 +306,7 @@
                         android:id="@+id/suggestions_list.second_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackground"
+                        android:background="@drawable/ripple_background_for_round_shape"
                         android:paddingVertical="@dimen/search_screen.suggestions_list.item.padding_vertical"
                         android:clickable="true"
                         android:focusable="true">
@@ -346,7 +346,7 @@
                         android:id="@+id/suggestions_list.third_item"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackground"
+                        android:background="@drawable/ripple_background_for_round_shape"
                         android:paddingVertical="@dimen/search_screen.suggestions_list.item.padding_vertical"
                         android:clickable="true"
                         android:focusable="true">

@@ -1,38 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/badge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:contentPaddingTop="@dimen/all_tickets_list_item.badge.padding_vertical"
-        app:contentPaddingBottom="@dimen/all_tickets_list_item.badge.padding_vertical"
-        app:contentPaddingLeft="@dimen/all_tickets_list_item.badge.padding_horizontal"
-        app:contentPaddingRight="@dimen/all_tickets_list_item.badge.padding_horizontal"
-        app:cardCornerRadius="@dimen/style.card.corner_radius"
-        app:cardBackgroundColor="@color/blue">
-
-        <TextView
-            android:id="@+id/badge_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/Title4"
-            tools:text="Самый удобный"/>
-    </androidx.cardview.widget.CardView>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/all_tickets_list_item.card.padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_background_for_round_shape"
         android:background="@drawable/rounded_background_shape"
         android:backgroundTint="@color/grey_1"
-        android:layout_marginTop="@dimen/all_tickets_list_item.card.margin_top"
-        android:layout_marginBottom="@dimen/all_tickets_list_item.card.margin_bottom">
+        app:layout_constraintTop_toBottomOf="@id/layout_badge_center">
 
         <TextView
             android:id="@+id/price"
@@ -132,16 +115,46 @@
             app:layout_constraintTop_toTopOf="@id/flight_duration" />
 
         <TextView
-            android:id="@+id/specification"
+            android:id="@+id/no_transfer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Text2"
             android:layout_marginStart="@dimen/all_tickets_list_item.symbol.margin_horizontal"
+            android:text="@string/all_tickets_list_item.no_transfer"
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintStart_toEndOf="@id/slash"
             app:layout_constraintTop_toTopOf="@id/slash"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Без пересадок" />
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/layout_badge_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/badge"
+        app:layout_constraintBottom_toBottomOf="@id/badge"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:contentPaddingTop="@dimen/all_tickets_list_item.badge.padding_vertical"
+        app:contentPaddingBottom="@dimen/all_tickets_list_item.badge.padding_vertical"
+        app:contentPaddingLeft="@dimen/all_tickets_list_item.badge.padding_horizontal"
+        app:contentPaddingRight="@dimen/all_tickets_list_item.badge.padding_horizontal"
+        app:cardCornerRadius="@dimen/style.card.corner_radius"
+        app:cardBackgroundColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/badge_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Title4"
+            tools:text="Самый удобный"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

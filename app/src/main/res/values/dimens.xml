@@ -103,11 +103,10 @@
     <dimen name="all_tickets.action_button_group.margin_bottom">16dp</dimen>
 
     <!-- All tickets list item -->
+    <dimen name="all_tickets_list_item.space_between">16dp</dimen>
     <dimen name="all_tickets_list_item.badge.padding_vertical">2dp</dimen>
     <dimen name="all_tickets_list_item.badge.padding_horizontal">10dp</dimen>
     <dimen name="all_tickets_list_item.card.padding">16dp</dimen>
-    <dimen name="all_tickets_list_item.card.margin_top">-16dp</dimen>
-    <dimen name="all_tickets_list_item.card.margin_bottom">16dp</dimen>
     <dimen name="all_tickets_list_item.price.margin_top">4dp</dimen>
     <dimen name="all_tickets_list_item.dot.size">24dp</dimen>
     <dimen name="all_tickets_list_item.time_from.margin_top">16dp</dimen>

@@ -53,6 +53,8 @@
     <!-- All tickets list item -->
     <string name="all_tickets_list_item.dash" translatable="false">–</string>
     <string name="all_tickets_list_item.slash" translatable="false">/</string>
+    <string name="all_tickets_list_item.no_transfer">Без пересадок</string>
+    <string name="all_tickets_list_item.flight_duration">%.1fч в пути</string>
 
     <!-- Date picker -->
     <string name="date_picker.title">Установите другую дату</string>

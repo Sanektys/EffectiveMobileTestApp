@@ -6,10 +6,11 @@ data class TicketItemDto(
     val price: Int = 0,
     val departure: Airport = Airport(),
     val arrival: Airport = Airport(),
+    val flightDuration: Float = 0f,
     val hasTransfer: Boolean = false,
 ) {
     data class Airport(
-        val date: String = "",
+        val time: String = "",
         val airport: String = ""
     )
 }

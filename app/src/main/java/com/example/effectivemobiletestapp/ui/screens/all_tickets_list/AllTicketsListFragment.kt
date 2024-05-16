@@ -7,8 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
+import com.example.effectivemobiletestapp.R
 import com.example.effectivemobiletestapp.databinding.FragmentAllTicketsListBinding
+import com.example.effectivemobiletestapp.domain.entities.TicketItemDto
 import com.example.effectivemobiletestapp.ui.MainActivity
+import com.example.effectivemobiletestapp.ui.utils.RecyclerVerticalSpaceItemDecoration
+import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import kotlinx.coroutines.launch
 
 class AllTicketsListFragment : Fragment() {
@@ -19,6 +24,8 @@ class AllTicketsListFragment : Fragment() {
     private val viewModel: AllTicketsListViewModel by lazy {
         ViewModelProvider(this).get(AllTicketsListViewModel::class.java)
     }
+
+    private var recyclerAdapter: ListDelegationAdapter<List<TicketItemDto>>? = null
 
 
     override fun onCreateView(
@@ -36,6 +43,8 @@ class AllTicketsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupFlightInfo()
 
+        initializeRecycler()
+
         binding.backArrowIcon.setOnClickListener {
             (requireActivity() as MainActivity).popBackStack()
         }
@@ -45,6 +54,7 @@ class AllTicketsListFragment : Fragment() {
         super.onDestroyView()
 
         _binding = null
+        recyclerAdapter = null
     }
 
     private fun setupFlightInfo() {
@@ -56,6 +66,23 @@ class AllTicketsListFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.flightSpecification.collect { value ->
                 binding.flightInfoSpecification.text = value
+            }
+        }
+    }
+
+    private fun initializeRecycler() {
+        binding.allTicketsList.addItemDecoration(
+            RecyclerVerticalSpaceItemDecoration(
+                resources.getDimension(R.dimen.all_tickets_list_item_space_between).toInt()
+            )
+        )
+
+        recyclerAdapter = ListDelegationAdapter(ticketsAdapterDelegate())
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.ticketsList.collect { newList ->
+                recyclerAdapter?.items = newList
+                binding.allTicketsList.adapter = recyclerAdapter
             }
         }
     }
